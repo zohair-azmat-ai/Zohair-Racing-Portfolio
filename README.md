@@ -15,15 +15,15 @@
 
 ## 🎮 Live Demo
 
-Play the game here: **[https://zohair-racing-portfolio.vercel.app/](https://zohair-racing-portfolio.vercel.app/)**
+Play the game directly in your browser.
 
 ---
 
 ## 🎥 Gameplay Demo
 
-<iframe width="100%" height="400" src="https://www.youtube.com/embed/2g7zmtmsIS0" frameborder="0" allowfullscreen></iframe>
+Watch the gameplay preview.
 
-Watch on YouTube: [https://youtube.com/shorts/2g7zmtmsIS0](https://youtube.com/shorts/2g7zmtmsIS0)
+<iframe width="100%" height="400" src="https://www.youtube.com/embed/2g7zmtmsIS0" frameborder="0" allowfullscreen></iframe>
 
 ---
 
