@@ -200,17 +200,20 @@ export default function GameCanvas() {
 
       {/* ── Mobile touch controls — visible only on small screens ────────── */}
       {status === "running" && (
-        <div className="fixed bottom-8 left-0 right-0 flex justify-center gap-6 md:hidden z-50">
+        <div className="fixed bottom-8 left-0 right-0 flex justify-center gap-14 md:hidden z-50">
           {/* Left button */}
           <button
             aria-label="Move left"
             onTouchStart={(e) => {
               e.preventDefault();
               keysRef.current["ArrowLeft"] = true;
+              if (typeof navigator !== "undefined" && navigator.vibrate) {
+                navigator.vibrate(20);
+              }
             }}
             onTouchEnd={() => { keysRef.current["ArrowLeft"] = false; }}
             onTouchCancel={() => { keysRef.current["ArrowLeft"] = false; }}
-            className="select-none"
+            className="select-none active:scale-95 transition-transform duration-75"
             style={{
               width: "72px",
               height: "72px",
@@ -238,10 +241,13 @@ export default function GameCanvas() {
             onTouchStart={(e) => {
               e.preventDefault();
               keysRef.current["ArrowRight"] = true;
+              if (typeof navigator !== "undefined" && navigator.vibrate) {
+                navigator.vibrate(20);
+              }
             }}
             onTouchEnd={() => { keysRef.current["ArrowRight"] = false; }}
             onTouchCancel={() => { keysRef.current["ArrowRight"] = false; }}
-            className="select-none"
+            className="select-none active:scale-95 transition-transform duration-75"
             style={{
               width: "72px",
               height: "72px",
