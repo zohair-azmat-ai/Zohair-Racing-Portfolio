@@ -213,7 +213,7 @@ export default function GameCanvas() {
             }}
             onTouchEnd={() => { keysRef.current["ArrowLeft"] = false; }}
             onTouchCancel={() => { keysRef.current["ArrowLeft"] = false; }}
-            className="select-none active:scale-95 transition-transform duration-75"
+            className="select-none active:scale-90 active:brightness-125 active:shadow-[0_0_30px_rgba(255,0,120,0.5)] transition-all duration-100"
             style={{
               width: "72px",
               height: "72px",
@@ -247,7 +247,7 @@ export default function GameCanvas() {
             }}
             onTouchEnd={() => { keysRef.current["ArrowRight"] = false; }}
             onTouchCancel={() => { keysRef.current["ArrowRight"] = false; }}
-            className="select-none active:scale-95 transition-transform duration-75"
+            className="select-none active:scale-90 active:brightness-125 active:shadow-[0_0_30px_rgba(255,0,120,0.5)] transition-all duration-100"
             style={{
               width: "72px",
               height: "72px",
