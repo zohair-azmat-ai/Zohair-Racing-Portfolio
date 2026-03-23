@@ -9,7 +9,21 @@
 [![Frontend](https://img.shields.io/badge/Type-Frontend-8B5CF6?style=for-the-badge)](#)
 [![Portfolio](https://img.shields.io/badge/Portfolio-Project-ff0033?style=for-the-badge)](#)
 
-> **Live Demo:** Coming soon &nbsp;|&nbsp; **Gameplay Demo:** Coming soon
+> **Live Demo:** [zohair-racing-portfolio.vercel.app](https://zohair-racing-portfolio.vercel.app/) &nbsp;|&nbsp; **Gameplay Demo:** [YouTube Short](https://youtube.com/shorts/2g7zmtmsIS0)
+
+---
+
+## 🎮 Live Demo
+
+Play the game here: **[https://zohair-racing-portfolio.vercel.app/](https://zohair-racing-portfolio.vercel.app/)**
+
+---
+
+## 🎥 Gameplay Demo
+
+<iframe width="100%" height="400" src="https://www.youtube.com/embed/2g7zmtmsIS0" frameborder="0" allowfullscreen></iframe>
+
+Watch on YouTube: [https://youtube.com/shorts/2g7zmtmsIS0](https://youtube.com/shorts/2g7zmtmsIS0)
 
 ---
 
