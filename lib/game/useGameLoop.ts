@@ -35,6 +35,7 @@ import {
 interface UseGameLoopReturn {
   canvasRef: React.RefObject<HTMLCanvasElement | null>;
   engineAudioRef: React.RefObject<HTMLAudioElement | null>;
+  keysRef: React.RefObject<Record<string, boolean>>;
   status: GameStatus;
   score: number;
   speed: number;
@@ -276,6 +277,7 @@ export function useGameLoop(): UseGameLoopReturn {
   return {
     canvasRef,
     engineAudioRef,
+    keysRef,
     status,
     score,
     speed,

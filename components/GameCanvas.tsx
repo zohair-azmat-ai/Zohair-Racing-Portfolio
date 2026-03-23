@@ -9,7 +9,7 @@ import { useRouter } from "next/navigation";
 
 export default function GameCanvas() {
   const router = useRouter();
-  const { canvasRef, engineAudioRef, status, score, speed, highScore, startGame, restartGame } =
+  const { canvasRef, engineAudioRef, keysRef, status, score, speed, highScore, startGame, restartGame } =
     useGameLoop();
 
   // Play engine audio directly from the user-gesture call stack, then start the game loop
@@ -182,10 +182,10 @@ export default function GameCanvas() {
         )}
       </div>
 
-      {/* Controls hint while playing */}
+      {/* Controls hint while playing — desktop only */}
       {status === "running" && (
         <div
-          className="mt-4 flex gap-5 font-mono"
+          className="mt-4 hidden md:flex gap-5 font-mono"
           style={{
             fontSize: "10px",
             letterSpacing: "0.12em",
@@ -195,6 +195,73 @@ export default function GameCanvas() {
           <span>← → ARROWS</span>
           <span style={{ color: "rgba(255,255,255,0.1)" }}>or</span>
           <span>A / D</span>
+        </div>
+      )}
+
+      {/* ── Mobile touch controls — visible only on small screens ────────── */}
+      {status === "running" && (
+        <div className="fixed bottom-8 left-0 right-0 flex justify-center gap-6 md:hidden z-50">
+          {/* Left button */}
+          <button
+            aria-label="Move left"
+            onTouchStart={(e) => {
+              e.preventDefault();
+              keysRef.current["ArrowLeft"] = true;
+            }}
+            onTouchEnd={() => { keysRef.current["ArrowLeft"] = false; }}
+            onTouchCancel={() => { keysRef.current["ArrowLeft"] = false; }}
+            className="select-none"
+            style={{
+              width: "72px",
+              height: "72px",
+              borderRadius: "50%",
+              background: "rgba(255, 0, 51, 0.12)",
+              border: "1px solid rgba(255, 0, 51, 0.4)",
+              backdropFilter: "blur(12px)",
+              WebkitBackdropFilter: "blur(12px)",
+              boxShadow: "0 0 18px rgba(255, 0, 51, 0.3), 0 0 40px rgba(124, 58, 237, 0.12)",
+              fontSize: "1.6rem",
+              color: "#ffffff",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              cursor: "pointer",
+              WebkitTapHighlightColor: "transparent",
+            }}
+          >
+            ←
+          </button>
+
+          {/* Right button */}
+          <button
+            aria-label="Move right"
+            onTouchStart={(e) => {
+              e.preventDefault();
+              keysRef.current["ArrowRight"] = true;
+            }}
+            onTouchEnd={() => { keysRef.current["ArrowRight"] = false; }}
+            onTouchCancel={() => { keysRef.current["ArrowRight"] = false; }}
+            className="select-none"
+            style={{
+              width: "72px",
+              height: "72px",
+              borderRadius: "50%",
+              background: "rgba(124, 58, 237, 0.12)",
+              border: "1px solid rgba(124, 58, 237, 0.4)",
+              backdropFilter: "blur(12px)",
+              WebkitBackdropFilter: "blur(12px)",
+              boxShadow: "0 0 18px rgba(124, 58, 237, 0.3), 0 0 40px rgba(255, 0, 51, 0.1)",
+              fontSize: "1.6rem",
+              color: "#ffffff",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              cursor: "pointer",
+              WebkitTapHighlightColor: "transparent",
+            }}
+          >
+            →
+          </button>
         </div>
       )}
     </div>
