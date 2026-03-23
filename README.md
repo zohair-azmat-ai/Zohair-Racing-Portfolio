@@ -13,20 +13,6 @@
 
 ---
 
-## 🎮 Live Demo
-
-Play the game directly in your browser.
-
----
-
-## 🎥 Gameplay Demo
-
-Watch the gameplay preview.
-
-<iframe width="100%" height="400" src="https://www.youtube.com/embed/2g7zmtmsIS0" frameborder="0" allowfullscreen></iframe>
-
----
-
 ## Overview
 
 ZA Racing is a fully playable top-down arcade car racing game that runs entirely in the browser — no backend, no downloads, no dependencies beyond the browser itself.
