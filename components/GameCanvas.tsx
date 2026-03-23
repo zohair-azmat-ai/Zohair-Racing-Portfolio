@@ -200,7 +200,7 @@ export default function GameCanvas() {
 
       {/* ── Mobile touch controls — visible only on small screens ────────── */}
       {status === "running" && (
-        <div className="fixed bottom-8 left-0 right-0 flex justify-center gap-14 md:hidden z-50">
+        <div className="fixed bottom-14 left-0 right-0 flex justify-center gap-14 md:hidden z-50">
           {/* Left button */}
           <button
             aria-label="Move left"

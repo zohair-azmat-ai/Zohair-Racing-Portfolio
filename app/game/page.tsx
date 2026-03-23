@@ -15,7 +15,7 @@ export default function GamePage() {
       <Navbar />
 
       <div
-        className="flex-1 flex flex-col items-center justify-center pt-24 pb-14 px-4"
+        className="flex-1 flex flex-col items-center justify-center pt-24 pb-14 md:pb-14 pb-36 px-4"
         style={{
           background:
             "radial-gradient(ellipse at 50% 20%, rgba(124,58,237,0.07) 0%, transparent 60%)",
